@@ -1,1 +1,1 @@
-# hsg-imp-website
+Website for the HSG integrative master project (IMP).
