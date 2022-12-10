@@ -1,7 +1,10 @@
-<html>
-    <header>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    </header>
+        <title>OICU - Object Identification using Contextual Understanding</title>
+    </head>
 
     <body>
         <div class="container">
@@ -13,7 +16,8 @@
         
               <ul class="nav nav-pills">
                 <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#comparison" class="nav-link">Comparison</a></li>
+                <li class="nav-item"><a href="#architecture" class="nav-link">Architecture</a></li>
                 <li class="nav-item"><a href="#faq" class="nav-link">FAQs</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
               </ul>
@@ -30,62 +34,89 @@
                 <h1 class="display-5 fw-bold lh-1 mb-3">OICU is a context-based identification system</h1>
                 <p class="lead">OICU provides explainable and robust object identification for videos, keeps track of them and stores the scene events in a temporal graph.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Features</button>
-                  <button type="button" class="btn btn-outline-secondary btn-lg px-4">About</button>
+                  <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Features</button>
+                  <button type="button" class="btn btn-outline-secondary btn-lg px-4">About</button> -->
                 </div>
               </div>
             </div>
           </div>
           
-          <div class="px-4 pt-5 my-5 text-center">
-            <h1 class="display-6 fw-bold">Situating OICU</h1>
-            <div class="col-lg-6 mx-auto">
-              <p class="lead mb-4">OICU features a combination of subsymbolic and symbolic AI, harnessing the real-world performance of subsymbolic AI and the transparency of symbolic reasoning.</p>
-            </div>
-            <div class="overflow-hidden" >
-              <div class="container px-5">
-                <img src="img/comparison.png" class="img-fluid border rounded-3 mb-4" alt="Example image" width="700" height="700" loading="lazy">
+          <div class="container px-4 py-5" id="comparison">
+            <h2 class="pb-2 border-bottom">Situating OICU</h2>
+              <p class="lead mb-4">OICU features a combination of subsymbolic and symbolic AI, harnessing the real-world performance of subsymbolic AI and the transparency of symbolic reasoning.
+                Instead of merely classifying objects into generic classes, it creates locally unique identifiers (LUI) for every recognised object from their context. LUIs are transparent and can even be integrated in other systems.
+              </p>
+              <div class="container text-center px-5">
+                <img src="img/comparison.png" class="img-fluid border rounded-3" alt="Example image" width="700" height="700" loading="lazy">
+              </div>
+          </div>
+
+          <div class="container px-4 py-5" id="architecture">
+            <h2 class="pb-2 border-bottom">Architecture</h2>
+            <p class="lead mb-4">
+              Our <a href="https://en.wikipedia.org/wiki/Casimir_effect"><it>Casimir</it></a> architecture consists of two large subsymbolic models on each end. They are connected by a heuristics-driven, symbolic link providing explainability, transparence, interoperability with other systems.
+            </p>
+            <div class="row g-4 row-cols-1 row-cols-lg-3">
+              <div class="feature col">
+                <h3>Scene graph generation</h3>
+                <p>On its lowest level, OICU generates scene graphs using a <a href="https://github.com/macemoth/reltr">customised transformer model</a> from image frames. Scene graphs are transparent and machine-readable descriptions of a scene.</p>
+                <div class="container">
+                  <img src="img/scenegraph.png" class="img-fluid rounded-3" alt="Example image" loading="lazy">
+                </div>
+              </div>
+              <div class="feature col">
+                <h3>Symbolic link</h3>
+                <p>Scene graphs from each frame are synthesised into a temporal graph, tracking identified objects as they change position and context over time. Location, their context, relations and class label are used for reidentification, achieving high accuracies.</p>
+                <div class="container">
+                  <img src="img/temporalgraph.jpeg" class="img-fluid rounded-3" alt="Example image" loading="lazy">
+                </div>
+              </div>
+              <div class="feature col">
+                <h3>Language model inference</h3>
+                <p>Results from the sybolic link are inserted into a general-purpose language model, providing an efficient and convenient interface for users as a QA system. Want to know what happened to the laptop on the table? Just ask the model!</p>
+                <div class="container">
+                  <img src="img/languagemodel.jpg" class="img-fluid rounded-3" alt="Example image" loading="lazy">
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="container px-4 py-5" id="features">
-            <h2 class="pb-2 border-bottom">Features</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-              <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                  <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
-                </div>
-                <h3 class="fs-2">Identification</h3>
-                <p>Instead of merely classifying objects into generic classes, it creates locally unique identifiers (LUI) for every recognised object from their context. LUIs are transparent and can even be integrated in other systems.</p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                  Call to action
-                  <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                </a>
+          <div class="b-example-divider"></div>
+
+          <div class="container" id="faq">
+            <h2 class="pb-2 border-bottom">Frequently asked questions</h2>
+              <div class="row p-3 pb-0 m-2 rounded-3 border">
+                  <h5>What exactly makes OICU explainable?</h5>
+                  <p>The symbolic link connecting the scene graph generator and the language model is essentially a graph with text vertices and nodes that be visually inspected. The heuristic rules matching an object in time <var>t-1</var> to one in <var>t</var> are human-crafted and can be changed upon desire, as any rules for triggering events can.</p>
               </div>
-              <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                  <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                </div>
-                <h3 class="fs-2">Explainability</h3>
-                <p>Where subsymbolic AI stalls, OICU excels. </p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                  Call to action
-                  <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                </a>
+              <div class="row p-3 pb-0 m-2 rounded-3 border">
+                <h5>Aren't there any deep learning models that perform the same task end-to-end?</h5>
+                <p>Yes, there are! But their end-to-end nature makes them black boxes, giving neither the user nor the developer insight into the inference process. Those models are further limited by biases and if their behaviour is to be altered, it must be implemented into the labelling and the models need to be retrained.</p>
               </div>
-              <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                  <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-                </div>
-                <h3 class="fs-2">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                  Call to action
-                  <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                </a>
+              <div class="row p-3 pb-0 m-2 rounded-3 border">
+                <h5>Can OICU do real-time processing?</h5>
+                <p>Not yet. Although the symbolic link and language model are reasonably fast, the scene graph generator is a research-grade implementation and not yet optimised for real-time processing. However, translating its code into <a href="https://www.tensorflow.org">TensorFlow</a> and using dedicated hardware should be sufficient for real-time processing.</p>
               </div>
-            </div>
           </div>
+
+          <div class="container px-4 py-5" id="about">
+            <h2 class="pb-2 border-bottom">About OICU</h2>
+              <p>OICU is developed as Integrative Master's Project at the <a href="https://ics.unisg.ch/chair-interactions-mayer/">Group for Interaction- and Communication-based Systems</a> at the <a href="https://ics.unisg.ch/#chairs">Institute of Computer Science</a> at the University of St. Gallen by <a href="http://github.com/yasmineantille">Yasmine Antille</a> and <a href="http://github.com/macemoth">Marc Solèr</a>.</p>
+              <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                  <iframe src="https://ghbtns.com/github-btn.html?user=macemoth&repo=HSG-IMP&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                  <br>
+                  <iframe src="https://ghbtns.com/github-btn.html?user=macemoth&repo=HSG-IMP&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+                  <br>
+                  <iframe src="https://ghbtns.com/github-btn.html?user=yasmineantille&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+                  <br>
+                  <iframe src="https://ghbtns.com/github-btn.html?user=macemoth&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <img src="img/hsg-imp.png" class="d-block mx-lg-auto img-fluid shadow-lg" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                </div>
+              </div>
+          </div>
+</div>
     </body>
 </html>
