@@ -32,7 +32,7 @@
               </div>
               <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3">OICU is a context-based identification system</h1>
-                <p class="lead">OICU provides explainable and robust object identification for videos, keeps track of them and stores the scene events in a temporal graph.</p>
+                <p class="lead">Our OICU system provides explainable and robust object identification in a video feed, keeps track of the identified objects and stores the scene understanding (object relationships) in a temporal graph.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                   <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Features</button>
                   <button type="button" class="btn btn-outline-secondary btn-lg px-4">About</button> -->
@@ -44,7 +44,7 @@
           <div class="container px-4 py-5" id="comparison">
             <h2 class="pb-2 border-bottom">Situating OICU</h2>
               <p class="lead mb-4">OICU features a combination of subsymbolic and symbolic AI, harnessing the real-world performance of subsymbolic AI and the transparency of symbolic reasoning.
-                Instead of merely classifying objects into generic classes, it creates locally unique identifiers (LUI) for every recognised object from their context. LUIs are transparent and can even be integrated in other systems.
+                Instead of merely classifying objects into generic classes, contextual unique identifiers (CUI) are created for every recognised object based on the contextual scene. These CUIs are transparent and can be integrated in other systems.
               </p>
               <div class="container text-center px-5">
                 <img src="img/comparison.png" class="img-fluid border rounded-3" alt="Example image" width="700" height="700" loading="lazy">
@@ -54,7 +54,7 @@
           <div class="container px-4 py-5" id="architecture">
             <h2 class="pb-2 border-bottom">Architecture</h2>
             <p class="lead mb-4">
-              Our <a href="https://en.wikipedia.org/wiki/Casimir_effect">Casimir</a> architecture consists of two large subsymbolic models on each end. They are connected by a heuristics-driven, symbolic link providing explainability, transparence, interoperability with other systems.
+              Our <a href="https://en.wikipedia.org/wiki/Casimir_effect">Casimir</a> architecture consists of two large subsymbolic models on each end. They are connected by a heuristics-driven, symbolic link providing explainability, transparence, and interoperability with other systems.
             </p>
             <div class="row g-4 row-cols-1 row-cols-lg-3">
               <div class="feature col">
@@ -66,14 +66,14 @@
               </div>
               <div class="feature col">
                 <h3>Symbolic link</h3>
-                <p>Scene graphs from each frame are synthesised into a temporal graph, tracking identified objects as they change position and context over time. Location, their context, relations and class label are used for reidentification, achieving high accuracies.</p>
+                <p>Scene graphs from each frame are synthesised into a temporal graph, tracking identified objects as they change position and context over time. Location, their context, relations and class labels are used for reidentification, achieving high accuracies.</p>
                 <div class="container">
                   <img src="img/temporalgraph.jpeg" class="img-fluid rounded-3" alt="Example image" loading="lazy">
                 </div>
               </div>
               <div class="feature col">
                 <h3>Language model inference</h3>
-                <p>Results from the sybolic link are inserted into a general-purpose language model, providing an efficient and convenient interface for users as a QA system. Want to know what happened to the laptop on the table? Just ask the model!</p>
+                <p>Results from the sybolic link are inserted into a general-purpose language model, providing an efficient and convenient interface for users as a QA system. For example: Forgot where you placed your phone on your overcrowded desk or in your office? Just ask the model!</p>
                 <div class="container">
                   <img src="img/languagemodel.jpg" class="img-fluid rounded-3" alt="Example image" loading="lazy">
                 </div>
@@ -87,7 +87,7 @@
             <h2 class="pb-2 border-bottom">Frequently asked questions</h2>
               <div class="row p-3 pb-0 m-2 rounded-3 border">
                   <h5>What exactly makes OICU explainable?</h5>
-                  <p>The symbolic link connecting the scene graph generator and the language model is essentially a graph with text vertices and nodes that be visually inspected. The heuristic rules matching an object in time <var>t-1</var> to one in <var>t</var> are human-crafted and can be changed upon desire, as any rules for triggering events can.</p>
+                  <p>Rather than just a black box end-to-end machine learning model, we provide the whitebox OICU system: The symbolic link connecting the scene graph generator and the language model is essentially a graph with text vertices and nodes that can be visually inspected. The heuristic rules matching an object in time <var>t-1</var> to one in <var>t</var> are human-crafted and can be changed regarding different use cases. Furthermore, specific behaviour that shall be detected by the system can be introduced to the system (triggering events).</p>
               </div>
               <div class="row p-3 pb-0 m-2 rounded-3 border">
                 <h5>Aren't there any deep learning models that perform the same task end-to-end?</h5>
@@ -101,7 +101,7 @@
 
           <div class="container px-4 py-5" id="about">
             <h2 class="pb-2 border-bottom">About OICU</h2>
-              <p class="lead mb-4">OICU is developed as Integrative Master's Project at the <a href="https://ics.unisg.ch/chair-interactions-mayer/">Group for Interaction- and Communication-based Systems</a> at the <a href="https://ics.unisg.ch/#chairs">Institute of Computer Science</a> at the University of St. Gallen by <a href="http://github.com/yasmineantille">Yasmine Antille</a> and <a href="http://github.com/macemoth">Marc Solèr</a>.</p>
+              <p class="lead mb-4">OICU is developed as part of the Integrative Master's Project at the <a href="https://ics.unisg.ch/chair-interactions-mayer/">Group for Interaction- and Communication-based Systems</a> at the <a href="https://ics.unisg.ch/#chairs">Institute of Computer Science</a> at the University of St. Gallen by <a href="http://github.com/yasmineantille">Yasmine Antille</a> and <a href="http://github.com/macemoth">Marc Solèr</a>.</p>
               <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-lg-6">
                   <iframe src="https://ghbtns.com/github-btn.html?user=macemoth&repo=HSG-IMP&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
