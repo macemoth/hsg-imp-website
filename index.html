@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-        <title>OICU - Object Identification using Context</title>
+        <title>OIC - Object Identification using Context</title>
     </head>
 
     <body>
@@ -31,8 +31,8 @@
                 <img src="img/graph.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
               </div>
               <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">OICU is a context-based identification system</h1>
-                <p class="lead">Our OICU system provides explainable and robust object identification in a video feed, keeps track of the identified objects and stores the scene understanding (object relationships) in a temporal graph.</p>
+                <h1 class="display-5 fw-bold lh-1 mb-3">OIC is a context-based identification system</h1>
+                <p class="lead">OIC provides explainable and robust object identification in a video feed, keeps track of the identified objects and stores the scene model as a collection objects and their context in a temporal graph.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                   <!-- <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Features</button>
                   <button type="button" class="btn btn-outline-secondary btn-lg px-4">About</button> -->
@@ -42,8 +42,8 @@
           </div>
           
           <div class="container px-4 py-5" id="comparison">
-            <h2 class="pb-2 border-bottom">Situating OICU</h2>
-              <p class="lead mb-4">OICU features a combination of subsymbolic and symbolic AI, harnessing the real-world performance of subsymbolic AI and the transparency of symbolic reasoning.
+            <h2 class="pb-2 border-bottom">Situating OIC</h2>
+              <p class="lead mb-4">OIC features a combination of subsymbolic and symbolic AI, harnessing the real-world performance of subsymbolic AI and the transparency of symbolic reasoning.
                 Instead of merely classifying objects into generic classes, contextual unique identifiers (CUI) are created for every recognised object based on the contextual scene. These CUIs are transparent and can be integrated in other systems.
               </p>
               <div class="container text-center px-5">
@@ -59,7 +59,7 @@
             <div class="row g-4 row-cols-1 row-cols-lg-3">
               <div class="feature col">
                 <h3>Scene graph generation</h3>
-                <p>On its lowest level, OICU generates scene graphs using a <a href="https://github.com/macemoth/reltr">customised transformer model</a> from image frames. Scene graphs are transparent and machine-readable descriptions of a scene.</p>
+                <p>On its lowest level, OIC generates scene graphs using a <a href="https://github.com/macemoth/reltr">customised transformer model</a> from image frames. Scene graphs are transparent and machine-readable descriptions of a scene.</p>
                 <div class="container">
                   <img src="img/scenegraph.png" class="img-fluid rounded-3" alt="Example image" loading="lazy">
                 </div>
@@ -75,7 +75,7 @@
                 <h3>Language model inference</h3>
                 <p>Results from the sybolic link are inserted into a general-purpose language model, providing an efficient and convenient interface for users as a QA system. For example: Forgot where you placed your phone on your overcrowded desk or in your office? Just ask the model!</p>
                 <div class="container">
-                  <img src="img/languagemodel.jpg" class="img-fluid rounded-3" alt="Example image" loading="lazy">
+                  <img src="img/languagemodel.png" class="img-fluid rounded-3" alt="Example image" loading="lazy">
                 </div>
               </div>
             </div>
@@ -86,22 +86,22 @@
           <div class="container" id="faq">
             <h2 class="pb-2 border-bottom">Frequently asked questions</h2>
               <div class="row p-3 pb-0 m-2 rounded-3 border">
-                  <h5>What exactly makes OICU explainable?</h5>
-                  <p>Rather than just a black box end-to-end machine learning model, we provide the whitebox OICU system: The symbolic link connecting the scene graph generator and the language model is essentially a graph with text vertices and nodes that can be visually inspected. The heuristic rules matching an object in time <var>t-1</var> to one in <var>t</var> are human-crafted and can be changed regarding different use cases. Furthermore, specific behaviour that shall be detected by the system can be introduced to the system (triggering events).</p>
+                  <h5>What exactly makes OIC explainable?</h5>
+                  <p>Rather than just a black box end-to-end machine learning model, we provide the whitebox OIC system: The symbolic link connecting the scene graph generator and the language model is essentially a graph with text vertices and nodes that can be visually inspected. The heuristic rules matching an object in time <var>t-1</var> to one in <var>t</var> are human-crafted and can be changed regarding different use cases. Furthermore, specific behaviour that shall be detected by the system can be introduced to the system (triggering events).</p>
               </div>
               <div class="row p-3 pb-0 m-2 rounded-3 border">
                 <h5>Aren't there any deep learning models that perform the same task end-to-end?</h5>
                 <p>Yes, there are! But their end-to-end nature makes them black boxes, giving neither the user nor the developer insight into the inference process. Those models are further limited by biases and if their behaviour is to be altered, it must be implemented into the labelling and the models need to be retrained.</p>
               </div>
               <div class="row p-3 pb-0 m-2 rounded-3 border">
-                <h5>Can OICU do real-time processing?</h5>
+                <h5>Can OIC do real-time processing?</h5>
                 <p>Not yet. Although the symbolic link and language model are reasonably fast, the scene graph generator is a research-grade implementation and not yet optimised for real-time processing. However, translating its code into <a href="https://www.tensorflow.org">TensorFlow</a> and using dedicated hardware should be sufficient for real-time processing.</p>
               </div>
           </div>
 
           <div class="container px-4 py-5" id="about">
-            <h2 class="pb-2 border-bottom">About OICU</h2>
-              <p class="lead mb-4">OICU is developed as part of the Integrative Master's Project at the <a href="https://ics.unisg.ch/chair-interactions-mayer/">Group for Interaction- and Communication-based Systems</a> at the <a href="https://ics.unisg.ch/#chairs">Institute of Computer Science</a> at the University of St. Gallen by <a href="http://github.com/yasmineantille">Yasmine Antille</a> and <a href="http://github.com/macemoth">Marc Solèr</a>.</p>
+            <h2 class="pb-2 border-bottom">About OIC</h2>
+              <p class="lead mb-4">OIC is developed as part of the Integrative Master's Project at the <a href="https://ics.unisg.ch/chair-interactions-mayer/">Group for Interaction- and Communication-based Systems</a> at the <a href="https://ics.unisg.ch/#chairs">Institute of Computer Science</a> at the University of St. Gallen by <a href="http://github.com/yasmineantille">Yasmine Antille</a> and <a href="http://github.com/macemoth">Marc Solèr</a>.</p>
               <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-lg-6">
                   <iframe src="https://ghbtns.com/github-btn.html?user=macemoth&repo=HSG-IMP&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
