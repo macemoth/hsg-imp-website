@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-        <title>OIC - Object Identification using Context</title>
+        <title>OIC - Object Identification and Contextual exlanation</title>
     </head>
 
     <body>
@@ -11,7 +11,7 @@
             <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <img src="img/logo_OIC.png" height="80">
-                <span class="fs-4">Object Identification using Context</span>
+                <span class="fs-4">Object Identification and Contextual explanation</span>
               </a>
         
               <ul class="nav nav-pills align-items-center">
@@ -54,7 +54,7 @@
           <div class="container px-4 py-5" id="architecture">
             <h2 class="pb-2 border-bottom">Architecture</h2>
             <p class="lead mb-4">
-              Our <a href="https://en.wikipedia.org/wiki/Casimir_effect">Casimir</a> architecture consists of two large subsymbolic models on each end. They are connected by a heuristics-driven, symbolic link providing explainability, transparence, and interoperability with other systems.
+              Our architecture consists of two large subsymbolic models on each end. They are connected by a heuristics-driven, symbolic link providing explainability, transparence, and interoperability with other systems.
             </p>
             <div class="row g-4 row-cols-1 row-cols-lg-3">
               <div class="feature col">
@@ -94,6 +94,10 @@
               <div class="row p-3 pb-0 m-2 rounded-3 border">
                 <h5>Can OIC do real-time processing?</h5>
                 <p>Not yet. Although the symbolic link and language model are reasonably fast, the scene graph generator is a research-grade implementation and not yet optimised for real-time processing. However, translating its code into <a href="https://www.tensorflow.org">TensorFlow</a> and using dedicated hardware should be sufficient for real-time processing.</p>
+              </div>
+              <div class="row p-3 pb-0 m-2 rounded-3 border">
+                <h5>Wait, can OIC not be misused to spy on people?</h5>
+                <p>Not more than any webcam can! OIC could even help to reduce tracking as it does only look at the context of things, but not their inherent features. As the symbolic link is configurable, OIC can even be disabled to identify certain classes, such as people. Also, OIC does not store image data, but only the temporal graph.</p>
               </div>
           </div>
 
